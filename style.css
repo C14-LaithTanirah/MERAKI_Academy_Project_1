@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(26, 26, 26);
+}
+header {
+  height: 120px;
+}
+.header{
+  border-bottom: 5px solid rgb(124, 124, 124);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  height: 140px;
+  width: 300px;
+
+}
+#GameRules{
+color: rgb(124, 124, 124);
+}
+#GameRulesList{
+  color: rgb(124, 124, 124);
+  font-weight: bold;
+  font-size: 20px;
+
+}
