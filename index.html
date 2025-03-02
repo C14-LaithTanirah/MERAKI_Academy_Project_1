@@ -11,28 +11,89 @@
       <div class="header"><img id="logo" src="imges/logo.png" alt="" /></div>
     </header>
     <main>
-      <div><h1 id="GameRules">Game rules</h1></div>
-      <div id="GameRulesList">
-        <ul>
-          <li>The game is played on a grid that's 3 squares by 3 squares.</li>
-          <li>
-            You are X, your friend (or the computer) is O . Players take turns
-            putting their marks in empty squares.
-          </li>
-          <li>
-            The winner is the first player to get 3 of her marks in a row (up,
-            down, across, or diagonally).
-          </li>
-          <li>
-            When 9 squares are full, the game is over. If no player has 3 marks
-            in a row, the game ends in a tie.
-          </li>
-        </ul>
+      <div id="welcomePage">
+        <div><h1 id="GameRules">Game rules</h1></div>
+        <div id="GameRulesList">
+          <ul>
+            <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+            <li>
+              You are X, your friend (or the computer) is O . Players take turns
+              putting their marks in empty squares.
+            </li>
+            <li>
+              The winner is the first player to get 3 of her marks in a row (up,
+              down, across, or diagonally).
+            </li>
+            <li>
+              When 9 squares are full, the game is over. If no player has 3
+              marks in a row, the game ends in a tie.
+            </li>
+          </ul>
+        </div>
+        <div id="parent">
+          <div id="child1">
+            <input class="input" />
+            <input class="input" />
+          </div>
+          <div id="child2">
+            <input type="radio" id="radioP1" name="XO1" value="X" />
+            <label for="html">X</label>
+            <input type="radio" id="radioP1" name="XO1" value="O" />
+            <label for="css">O</label>
+            <input
+              type="radio"
+              id="radioP2"
+              name="XO2"
+              value="X"
+              style="margin-left: 230px"
+            />
+            <label for="html">X</label>
+            <input type="radio" id="radioP2" name="XO2" value="O" />
+            <label for="css">O</label>
+          </div>
+          <div id="child3">
+            <button>Play</button>
+          </div>
+        </div>
       </div>
-      <div id="parent">
-        <div id="child1"><input /><input /></div>
-        <div id="child2"></div>
-        <div id="child3"></div>
+      <div id="Game">
+        <div id="timer">
+          <div><h1>Timer</h1></div>
+          <div>
+            <input type="radio" id="timer" name="timer" value="1" />
+            <label for="html">1</label>
+            <input type="radio" id="timer" name="timer" value="2" />
+            <label for="css">2</label>
+            <input type="radio" id="timer" name="timer" value="3" />
+            <label for="html">3</label>
+            <input type="radio" id="timer" name="timer" value="4" />
+            <label for="css">4</label>
+          </div>
+        </div>
+        <div id="GameBox">
+          <div class="Player12"><h1 class="input" id="name">laith</h1></div>
+          <div class="Boxs">
+            <button class="inputBox">1</button
+            ><button class="inputBox">2</button
+            ><button class="inputBox">3</button>
+          </div>
+          <div class="Player12"><h1 class="input" id="name">laith</h1></div>
+          <div class="XO"><h1 class="input" id="name">X</h1></div>
+          <div class="Boxs">
+            <button class="inputBox">4</button
+            ><button class="inputBox">5</button
+            ><button class="inputBox">6</button>
+          </div>
+          <div class="XO"><h1 class="input" id="name">O</h1></div>
+          <div class="score"><h1>SCORE:5</h1></div>
+          <div class="Boxs">
+            <button class="inputBox">7</button
+            ><button class="inputBox">8</button
+            ><button class="inputBox">9</button>
+          </div>
+          <div class="score"><h1>SCORE:5</h1></div>
+        </div>
+        <div id="endGame"><button>end game</button></div>
       </div>
     </main>
     <script src="main.js"></script>
