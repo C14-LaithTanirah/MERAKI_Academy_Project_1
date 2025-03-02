@@ -1,63 +1,56 @@
+const correctSoulutions = [
+  ["0", "1", "2"],
+  ["3", "4", "5"],
+  ["6", "7", "8"],
+  ["0", "3", "6"],
+  ["1", "4", "7"],
+  ["2", "5", "8"],
+  ["0", "4", "8"],
+  ["2", "4", "6"],
+];
 const xSoulution = [];
 const oSoulution = [];
 let active = true;
 let turn = "x";
 
 const cell = document.querySelectorAll(".inputBox");
-cell.forEach((x) =>
+cell.forEach((x, i) =>
   x.addEventListener("click", (e) => {
     if (turn === "x") {
-      if (e.target.innerText === 0) {
-        xSoulution[0][0] = 0;
-      } else if (e.target.innerText === 1) {
-        xSoulution[0][1] = 0;
-      } else if (e.target.innerText === 2) {
-        xSoulution[0][2] = 0;
-      } else if (e.target.innerText === 3) {
-        xSoulution[1][0] = 0;
-      } else if (e.target.innerText === 4) {
-        xSoulution[1][1] = 0;
-      } else if (e.target.innerText === 5) {
-        xSoulution[1][2] = 0;
-      } else if (e.target.innerText === 6) {
-        xSoulution[2][0] = 0;
-      } else if (e.target.innerText === 7) {
-        xSoulution[2][1] = 0;
-      } else if (e.target.innerText === 8) {
-        xSoulution[2][2] = 0;
-      }
+      xSoulution.push(e.target.innerText);
     } else {
-      if (e.target.innerText === 0) {
-        oSoulution[0][0] = 0;
-      } else if (e.target.innerText === 1) {
-        oSoulution[0][1] = 0;
-      } else if (e.target.innerText === 2) {
-        oSoulution[0][2] = 0;
-      } else if (e.target.innerText === 3) {
-        oSoulution[1][0] = 0;
-      } else if (e.target.innerText === 4) {
-        oSoulution[1][1] = 0;
-      } else if (e.target.innerText === 5) {
-        oSoulution[1][2] = 0;
-      } else if (e.target.innerText === 6) {
-        oSoulution[2][0] = 0;
-      } else if (e.target.innerText === 7) {
-        oSoulution[2][1] = 0;
-      } else if (e.target.innerText === 8) {
-        oSoulution[2][2] = 0;
-      }
+      oSoulutionSoulution.push(e.target.innerText);
     }
-
     console.log(xSoulution);
   })
 );
 
 check = function () {
-  if ((turn = "x")) {
-    for (let x = 0; x < xSoulution.length; x++) {
-      for (let j = 0; j < xSoulution[x].length; j++) {
-        
+  if (turn === "x") {
+    correctSoulutions.forEach((e, i) => {
+      let round = [];
+      for (let x = 0; x < xSoulution.length; x++) {
+        if (e.includes(xSoulution[x])) {
+          round.push(xSoulution[x]);
+          console.log(round.length);
+          if (round.length === 3) {
+            return "laith";
+          }
+        }
       }
-    }
+    });
+  } else {
+    correctSoulutions.forEach((e, i) => {
+      let round = [];
+      for (let x = 0; x < oSoulution.length; x++) {
+        if (e.includes(oSoulution[x])) {
+          round.push(oSoulution[x]);
+          console.log(round.length);
+          if (round.length === 3) {
+            return "laith";
+          }
+        }
+      }
+    });
   }
 };
