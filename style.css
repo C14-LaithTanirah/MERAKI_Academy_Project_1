@@ -44,6 +44,18 @@ header {
   background-color: rgb(26, 26, 26);
   font-size: 20px;
   color: rgb(124, 124, 124);
+  text-align: center;
+}
+
+#child0 {
+  margin-bottom: 20px;
+  align-self: center;
+  color: rgb(124, 124, 124);
+  font-size: 35px;
+}
+.label {
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 #child1 {
@@ -59,11 +71,11 @@ header {
 }
 
 #welcomePage {
-  display: none;
+  display: block;
 }
 
 #Game {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-items: center;
 }
@@ -102,4 +114,14 @@ header {
 #name {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.button {
+  background-color: rgb(26, 26, 26);
+  font-size: 40px;
+  border: 5px solid rgb(124, 124, 124);
+  border-radius: 20%;
+  color: rgb(124, 124, 124);
+  padding: 5px 50px 5px 50px;
+  box-shadow: 4px 4px 2px 1px rgb(124, 124, 124);
 }

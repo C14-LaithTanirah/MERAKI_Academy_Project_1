@@ -1,3 +1,20 @@
+const welcomePage = document.querySelector("#welcomePage");
+const welcomePagecssObj = window.getComputedStyle(welcomePage);
+let welcomePageDisplay = welcomePagecssObj.getPropertyValue("display");
+
+const Game = document.querySelector("#Game");
+const GamecssObj = window.getComputedStyle(Game);
+let Gamedisplay = GamecssObj.getPropertyValue("display");
+
+const playButton = document.querySelector("#play");
+playButton.addEventListener("click", () => {
+  if (welcomePageDisplay === "block") {
+    console.log(welcomePageDisplay);
+    welcomePage.style.display = "none";
+    Game.style.display = "block";
+  }
+});
+
 const correctSoulutions = [
   ["0", "1", "2"],
   ["3", "4", "5"],
@@ -33,8 +50,10 @@ check = function () {
         if (e.includes(xSoulution[x])) {
           round.push(xSoulution[x]);
           console.log(round.length);
+          console.log(round.length === 3);
+
           if (round.length === 3) {
-            return "laith";
+            console.log("laith");
           }
         }
       }
