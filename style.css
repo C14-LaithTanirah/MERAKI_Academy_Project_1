@@ -47,6 +47,27 @@ header {
   text-align: center;
 }
 
+#input1 {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top: 2px solid rgb(124, 124, 124);
+  border-bottom: 2px solid rgb(124, 124, 124);
+  border-right: none;
+  border-left: none;
+  box-shadow: 4px 4px 2px 1px rgb(124, 124, 124);
+  background-color: rgb(26, 26, 26);
+  font-size: 50px;
+  color: rgb(124, 124, 124);
+  text-align: center;
+}
+
+
+
 #child0 {
   margin-bottom: 20px;
   align-self: center;
@@ -104,13 +125,6 @@ header {
 .score {
   color: rgb(124, 124, 124);
 }
-.XO {
-}
-.Boxs {
-}
-.Player12 {
-}
-
 .inputBox {
   background-color: rgb(124, 124, 124);
   font-size: 20px;
@@ -130,4 +144,16 @@ header {
   color: rgb(124, 124, 124);
   padding: 5px 50px 5px 50px;
   box-shadow: 4px 4px 2px 1px rgb(124, 124, 124);
+}
+
+#winnerPage {
+  display: none;
+  flex-direction: column;
+  justify-self: center;
+  gap: 30px;
+}
+
+#playAgane{
+
+  margin: 30px 60px 30px ;
 }

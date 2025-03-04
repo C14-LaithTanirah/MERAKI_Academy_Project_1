@@ -39,22 +39,6 @@
             <input class="input" id="palyer1" />
             <input class="input" id="palyer2" />
           </div>
-          <div id="child2">
-            <input type="radio" id="radioP1" name="XO1" value="X" />
-            <label for="html">X</label>
-            <input type="radio" id="radioP1" name="XO1" value="O" />
-            <label for="css">O</label>
-            <input
-              type="radio"
-              id="radioP2"
-              name="XO2"
-              value="X"
-              style="margin-left: 230px"
-            />
-            <label for="html">X</label>
-            <input type="radio" id="radioP2" name="XO2" value="O" />
-            <label for="css">O</label>
-          </div>
           <div id="child3">
             <button class="button" id="play">Play</button>
           </div>
@@ -66,13 +50,13 @@
           <div id="Timer"></div>
         </div>
         <div id="GameBox">
-          <div class="Player12"><h1 class="input" id="name1"></h1></div>
+          <div class="Player12" id="name1"></div>
           <div class="Boxs">
             <button class="inputBox">0</button
             ><button class="inputBox">1</button
             ><button class="inputBox">2</button>
           </div>
-          <div class="Player12"><h1 class="input" id="name1"></h1></div>
+          <div class="Player12" id="name2"></div>
           <div class="XO"><h1 class="input" id="name">X</h1></div>
           <div class="Boxs">
             <button class="inputBox">3</button
@@ -80,15 +64,20 @@
             ><button class="inputBox">5</button>
           </div>
           <div class="XO"><h1 class="input" id="name">O</h1></div>
-          <div class="score"><h1 id="scoreP1">SCORE:5</h1></div>
+          <div class="score"><h1 id="scoreP1"></h1></div>
           <div class="Boxs">
             <button class="inputBox">6</button
             ><button class="inputBox">7</button
             ><button class="inputBox">8</button>
           </div>
-          <div class="score"><h1 id="scoreP2">SCORE:5</h1></div>
+          <div class="score"><h1 id="scoreP2"></h1></div>
         </div>
-        <div id="endGame"><button class="button">end game</button></div>
+      </div>
+      <div id="winnerPage">
+        <div class="score"><h1 style="margin-left:130px;">The winner is</h1></div>
+        <div id="winnerPlayer"></div>
+        <div id="scorePlayer"></div>
+        <div><button class="button" id="playAgane">Play Agane</button></div>
       </div>
     </main>
     <script src="main.js"></script>
