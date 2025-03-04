@@ -2,6 +2,8 @@ const welcomePage = document.querySelector("#welcomePage");
 const welcomePagecssObj = window.getComputedStyle(welcomePage);
 let welcomePageDisplay = welcomePagecssObj.getPropertyValue("display");
 
+let clickSound = document.querySelector("#audio");
+
 const Game = document.querySelector("#Game");
 const GamecssObj = window.getComputedStyle(Game);
 let Gamedisplay = GamecssObj.getPropertyValue("display");
@@ -22,7 +24,7 @@ let winnerdisplay = winnercssObj.getPropertyValue("display");
 const winnerPlayer = document.querySelector("#winnerPlayer");
 const scorePlayer = document.querySelector("#scorePlayer");
 const scorePlayer1 = document.createElement("h1");
-scorePlayer1.id="input1"
+scorePlayer1.id = "input1";
 
 let scoreP1 = 0;
 let scoreP2 = 0;
@@ -35,6 +37,7 @@ score2.innerText = `SCORE : ${scoreP2}`;
 
 const playAganeButton = document.querySelector("#playAgane");
 playAganeButton.addEventListener("click", () => {
+  clickSound.play();
   const cell = document.querySelectorAll(".inputBox");
   cell.forEach((e, i) => {
     e.innerText = i;
@@ -50,6 +53,7 @@ playAganeButton.addEventListener("click", () => {
 
 const playButton = document.querySelector("#play");
 playButton.addEventListener("click", () => {
+  clickSound.play();
   if (welcomePageDisplay === "block") {
     name1.append(h1Name1);
     h1Name1.id = "input1";
@@ -62,7 +66,6 @@ playButton.addEventListener("click", () => {
     Game.style.display = "block";
   }
 });
-
 
 const correctSoulutions = [
   ["0", "1", "2"],
@@ -83,6 +86,7 @@ const addCellListenrs = function () {
   const cell = document.querySelectorAll(".inputBox");
   cell.forEach((x, i) =>
     x.addEventListener("click", (e) => {
+      clickSound.play();
       if (turn === "x") {
         if (e.target.innerText !== "X" && e.target.innerText !== "O") {
           xSoulution.push(e.target.innerText);
