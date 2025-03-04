@@ -3,6 +3,7 @@ const welcomePagecssObj = window.getComputedStyle(welcomePage);
 let welcomePageDisplay = welcomePagecssObj.getPropertyValue("display");
 
 let clickSound = document.querySelector("#audio");
+let Sound = document.querySelector("#sound");
 
 const Game = document.querySelector("#Game");
 const GamecssObj = window.getComputedStyle(Game);
@@ -156,4 +157,7 @@ const check = function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   addCellListenrs();
+  setInterval(function () {
+    Sound.play();
+  }, 1000);
 });
